@@ -1,0 +1,215 @@
+:root {
+  --header-bar-height: 60px;
+  --mobile-header-bar-height: 60px;
+  --nav-bar-size: 80px;
+  --mobile-nav-bar-size: 10%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: #f1f4f6;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+}
+
+.customIconContainer {
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 0.5rem;
+}
+
+.textContainer.text-center {
+  font-size: 12px;
+}
+
+.btnGroup Button {
+  display: inline-block;
+  border: 1px solid #dedede;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 6px 14px;
+}
+
+.btnGroup::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btnGroup Button:not(:last-child) {
+  border-right: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .app-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: var(--nav-bar-size);
+    background: white;
+    height: var(--header-bar-height);
+  }
+  .app-navbar {
+    width: var(--nav-bar-size);
+    position: fixed;
+    left: 0;
+    height: 100%;
+    background: white;
+  }
+  .collapsed-nav-bar {
+    position: fixed;
+    top: 0;
+    left: var(--nav-bar-size);
+    padding: 0 18px;
+    background-color: white;
+    height: 100%;
+    max-width: 0px;
+    overflow-x: hidden;
+    background: black;
+    transition: 0.2s ease-out;
+  }
+  .collapsed-nav-bar.open {
+    max-width: 20%;
+  }
+  .app-internal-container {
+    background: black;
+    position: fixed;
+    width: calc(100% - var(--nav-bar-size));
+    height: calc(100% - var(--header-bar-height));
+    top: var(--header-bar-height);
+    left: var(--nav-bar-size);
+  }
+
+  .side-drawer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 11.47%;
+    z-index: 200;
+    box-shadow: 4px 0 5px -2px rgba(0, 0, 0, 0.5);
+    transform: translateX(-125%);
+    transition: transform 0.6s ease-out;
+  }
+
+  .side-drawer.open {
+    transform: translateX(0);
+    position: fixed;
+    left: var(--nav-bar-size);
+  }
+
+  .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+
+  .thumbnail-item {
+    margin: 0.3rem;
+  }
+
+  .side-drawer img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .app-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: white;
+    height: var(--mobile-header-bar-height);
+  }
+  .app-navbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: var(--mobile-nav-bar-size);
+    background: white;
+  }
+
+  .customIconContainer {
+    display: inline-block !important;
+    margin-right: 0.7rem;
+    margin-top: 0.3rem;
+    background-color: transparent;
+    padding: 0.2rem;
+    font-size: medium;
+    width: 50px;
+  }
+
+  .customIconContainer:first-child {
+    margin-left: 1.5rem;
+  }
+
+  .textContainer.text-center {
+    font-size: 11px;
+  }
+
+  .collapsed-nav-bar {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0px;
+    overflow: hidden;
+    background: black;
+    transition: 0.2s ease-out;
+  }
+  .collapsed-nav-bar.open {
+    max-height: 40%;
+  }
+  .app-internal-container {
+    background: black;
+    position: fixed;
+    width: 100%;
+    height: calc(
+      100% - var(--mobile-header-bar-height) - var(--mobile-nav-bar-size)
+    );
+    top: var(--mobile-header-bar-height);
+    bottom: var(--mobile-nav-bar-size);
+  }
+
+  .side-drawer {
+    width: 100%;
+    height: 40%;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    /* box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5); */
+    transform: translateY(125%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .side-drawer.open {
+    transform: translateY(0);
+    position: fixed;
+    bottom: var(--mobile-nav-bar-size);
+  }
+
+  .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+}
