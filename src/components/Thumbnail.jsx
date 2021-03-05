@@ -8,8 +8,6 @@ const Thumbnail = () => {
         className="thumbnail-item"
         src={ThumbnailImg}
         alt="Product Thumbnails"
-        width={`125px`}
-        height={`100px`}
       />
     </>
   );

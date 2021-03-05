@@ -1,37 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaCropAlt, FaObjectGroup, FaPinterestP } from "react-icons/fa";
-import { GrTemplate } from "react-icons/gr";
-import { BiText } from "react-icons/bi";
-import { IconBase } from "react-icons";
-
-const ICON = {
-  PRODUCT: <FaPinterestP />,
-  TEMPLATE: <GrTemplate />,
-  FORMAT: <FaCropAlt />,
-  TEXT: <BiText />,
-  OBJECT: <FaObjectGroup />,
-};
-
-const backgroundColor = {
-  PRIMARY: "#0275D8",
-  SUCCESS: "#5CB85C",
-  DANGER: "#D9534F",
-  SECONDARY: "#292B2C",
-  LIGHT: "#F7F7F7",
-  WARNING: "#F0AD4E",
-  INFO: "#5BC0DE",
-};
-
-const color = {
-  textPrimary: "#0275D8",
-  textSuccess: "#5CB85C",
-  textDanger: "#D9534F",
-  textSecondary: "#292B2C",
-  textLight: "#F7F7F7",
-  textWarning: "#F0AD4E",
-  textInfo: "#5BC0DE",
-};
+import { ICON } from "../assets/utils/Icons";
+import { BACKGROUNDCOLOR } from "../assets/utils/BackgroundColor";
+import { COLOR } from "../assets/utils/Color";
 
 const Button = ({
   text,
@@ -69,15 +40,15 @@ Button.propTypes = {
   extraClass: PropTypes.string,
   id: PropTypes.string,
   icon: PropTypes.oneOf(Object.keys(ICON)),
-  backgroundColor: PropTypes.oneOf(Object.keys(backgroundColor)),
-  color: PropTypes.oneOf(Object.keys(color)),
+  backgroundColor: PropTypes.oneOf(Object.keys(BACKGROUNDCOLOR)),
+  color: PropTypes.oneOf(Object.keys(COLOR)),
   value: PropTypes.bool,
   onClickFunction: PropTypes.func,
 };
 
-Button.icon = ICON.PRODUCT;
-Button.backgroundColor = backgroundColor;
-Button.color = color;
+Button.icon = ICON;
+Button.backgroundColor = BACKGROUNDCOLOR;
+Button.color = COLOR;
 
 Button.defaultProps = {
   type: "button",

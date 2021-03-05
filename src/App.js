@@ -1,11 +1,10 @@
 import { useState } from "react";
-import Button from "./components/Button";
-import ButtonGroup from "./components/ButtonGroup";
+// import Button from "./components/Button";
+// import ButtonGroup from "./components/ButtonGroup";
 import Backdrop from "./pages/Backdrop";
 import DashboardInit from "./pages/DashboardInit";
 import Drawer from "./pages/Drawer";
-import IconContainer from "./pages/IconContainer";
-import MainPage from "./pages/MainPage";
+import NavbarContainer from "./pages/NavbarContainer";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -27,7 +26,7 @@ function App() {
     <div className="app-container">
       <Drawer show={drawerOpen} />
       <div className="app-navbar">
-        <IconContainer toggle={drawerToggleClickHandler} />
+        <NavbarContainer toggle={drawerToggleClickHandler} />
       </div>
       <div className="app-header"></div>
       {backdrop}
@@ -50,9 +49,9 @@ function App() {
     //   <ButtonGroup text1={"+"} text2={`100%`} text3={`-`} />
     // </div>
 
-    // <>
-    //   <MainPage />
-    // </>
+    // <div>
+    //   <NavbarContainer />
+    // </div>
   );
 }
 

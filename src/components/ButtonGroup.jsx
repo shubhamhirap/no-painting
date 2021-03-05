@@ -1,17 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaCropAlt, FaObjectGroup, FaPinterestP } from "react-icons/fa";
-import { GrTemplate } from "react-icons/gr";
-import { BiText } from "react-icons/bi";
 import Button from "./Button";
+import { ICON } from "../assets/utils/Icons";
 
-const icon = {
-  PRODUCT: <FaPinterestP />,
-  TEMPLATE: <GrTemplate />,
-  FORMAT: <FaCropAlt />,
-  TEXT: <BiText />,
-  OBJECT: <FaObjectGroup />,
-};
 
 const ButtonGroup = ({
   id,
@@ -36,16 +27,16 @@ const ButtonGroup = ({
 ButtonGroup.propTypes = {
   id: PropTypes.string,
   extraClass: PropTypes.string,
-  icon1: PropTypes.oneOf(Object.keys(icon)),
-  icon2: PropTypes.oneOf(Object.keys(icon)),
-  icon3: PropTypes.oneOf(Object.keys(icon)),
+  icon1: PropTypes.oneOf(Object.keys(ICON)),
+  icon2: PropTypes.oneOf(Object.keys(ICON)),
+  icon3: PropTypes.oneOf(Object.keys(ICON)),
   text1: PropTypes.string,
   text2: PropTypes.string,
   text3: PropTypes.string,
   onClickFunc: PropTypes.func,
 };
 
-ButtonGroup.icon = icon;
+ButtonGroup.icon = ICON;
 
 ButtonGroup.defaultProps = {
   id: "",
