@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 // import Button from "./components/Button";
 // import ButtonGroup from "./components/ButtonGroup";
 import Backdrop from "./pages/Backdrop";
@@ -23,17 +24,17 @@ function App() {
   }
 
   return (
-    <div className="app-container">
-      <Drawer show={drawerOpen} />
-      <div className="app-navbar">
-        <NavbarContainer toggle={drawerToggleClickHandler} />
-      </div>
-      <div className="app-header"></div>
-      {backdrop}
-      <div className="app-internal-container">
-        <DashboardInit />
-      </div>
-    </div>
+    // <div className="app-container">
+    //   <Drawer show={drawerOpen} />
+    //   <div className="app-navbar">
+    //     <NavbarContainer toggle={drawerToggleClickHandler} />
+    //   </div>
+    //   <div className="app-header"></div>
+    //   {backdrop}
+    //   <div className="app-internal-container">
+    //     <DashboardInit />
+    //   </div>
+    // </div>
 
     // <div>
     //   <Button
@@ -52,6 +53,20 @@ function App() {
     // <div>
     //   <NavbarContainer />
     // </div>
+
+    <Router>
+      <div className="app-container">
+        <Drawer show={drawerOpen} />
+        <div className="app-navbar">
+          <NavbarContainer toggle={drawerToggleClickHandler} />
+        </div>
+        <div className="app-header"></div>
+        {backdrop}
+        <div className="app-internal-container">
+          <DashboardInit />
+        </div>
+      </div>
+    </Router>
   );
 }
 

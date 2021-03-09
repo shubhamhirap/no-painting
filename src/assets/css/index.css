@@ -92,7 +92,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 11.47%;
+    width: 15%;
+    /* width: 11.47%; */
     z-index: 200;
     box-shadow: 4px 0 5px -2px rgba(0, 0, 0, 0.5);
     transform: translateX(-125%);
@@ -119,6 +120,14 @@ body {
     margin-top: 0.5rem;
   }
 
+  .font-ex-tn img {
+    display: inline-block !important;
+    width: 40% !important;
+    height: 4% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+
   .side-drawer img {
     display: block;
     margin-left: auto;
@@ -135,8 +144,102 @@ body {
   .textContainer.text-center {
     font-size: 10px;
   }
-}
 
+  .nav-item {
+    list-style-type: none;
+    margin-top: 0.5rem;
+    height: 3rem;
+  }
+
+  .nav-item-link {
+    color: black;
+    text-decoration: none;
+  }
+
+  .nav-item-link:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+  .text-holder {
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 90%;
+    background-color: lightgray;
+    border-radius: 3px;
+  }
+
+  .formatContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #format-group1 {
+    width: 80%;
+    display: inline-block;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  #format-group1 > label {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+
+  #format-group2 > div > label,
+  #format-group3 > div > label {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+  }
+
+  #format-group2 > div,
+  #format-group3 > div {
+    background-color: lightgray;
+    margin: 0.5rem 0;
+    border-radius: 2px;
+  }
+
+  #format-group2 > div > input[type="radio"],
+  #format-group3 > div > input[type="radio"] {
+    margin-left: 0.2rem;
+  }
+
+  .object-heading-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .object-heading {
+    margin-top: 1rem;
+  }
+
+  h6 {
+    display: inline-block !important;
+    line-height: 1.5 !important;
+  }
+
+  .object-link {
+    text-decoration: underline;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+  }
+
+  .object-link:hover {
+    color: black;
+  }
+
+  .object-svg {
+    padding: 0.1rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 0.25rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .app-header {
     width: 100%;
@@ -153,22 +256,8 @@ body {
     background: white;
   }
 
-  /* .customIconContainer {
-    display: inline-block !important;
-    margin-right: 0.7rem;
-    margin-top: 0.3rem;
-    background-color: transparent;
-    padding: 0.2rem;
-    font-size: medium;
-    width: 50px;
-  }
-
-  .customIconContainer:first-child {
-    margin-left: 1.5rem;
-  } */
-
   .textContainer.text-center {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .collapsed-nav-bar {
@@ -233,5 +322,41 @@ body {
     z-index: 100;
     top: 0;
     left: 0;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+  }
+
+  .nav-item {
+    list-style-type: none;
+  }
+
+  .nav-item-link {
+    color: black;
+    text-decoration: none;
+  }
+
+  .nav-item-link:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .app-navbar button {
+    width: 17%;
+    height: 80%;
+    margin: 0.2rem;
+  }
+
+  .app-navbar button:first-child {
+    margin-left: 0.3rem;
+  }
+
+  .textContainer.text-center {
+    font-size: 13px;
   }
 }
