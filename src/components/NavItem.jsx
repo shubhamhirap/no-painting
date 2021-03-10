@@ -13,7 +13,7 @@ const NavItem = ({ icon, text, extraClass, onClickFunction }) => {
   );
 };
 
-NavItem.propTypes = {
+NavItem.propTypes = { 
   text: PropTypes.string,
   extraClass: PropTypes.string,
   icon: PropTypes.oneOf(Object.keys(ICON)),

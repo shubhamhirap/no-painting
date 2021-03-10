@@ -6,6 +6,7 @@ import Backdrop from "./pages/Backdrop";
 import DashboardInit from "./pages/DashboardInit";
 import Drawer from "./pages/Drawer";
 import NavbarContainer from "./pages/NavbarContainer";
+import RefreshButton from "./pages/RefreshButton";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -59,6 +60,7 @@ function App() {
         <Drawer show={drawerOpen} />
         <div className="app-navbar">
           <NavbarContainer toggle={drawerToggleClickHandler} />
+          <RefreshButton />
         </div>
         <div className="app-header"></div>
         {backdrop}

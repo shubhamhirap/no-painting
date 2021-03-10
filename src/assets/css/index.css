@@ -161,6 +161,17 @@ body {
     text-decoration: none;
   }
 
+  #nav-refresh-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 1.25rem;
+  }
+
+  .bottom-btn {
+    position: fixed;
+    bottom: 4;
+  }
+
   .text-holder {
     margin-left: 5%;
     margin-right: 10%;
