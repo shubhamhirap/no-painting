@@ -1,5 +1,10 @@
-import React from "react";
-import { GiBiohazard, GiExitDoor, GiNuclearWaste } from "react-icons/gi";
+import React, { useRef } from "react";
+import {
+  GiBiohazard,
+  GiCrossedBones,
+  GiExitDoor,
+  GiNuclearWaste,
+} from "react-icons/gi";
 import {
   BsArrowReturnLeft,
   BsArrowReturnRight,
@@ -21,11 +26,22 @@ import { FaGasPump, FaHospital, FaSchool, FaSkull } from "react-icons/fa";
 import { BiHotel } from "react-icons/bi";
 import { MdAssignmentReturn } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Input from "../components/Input";
 
 const ObjectsContainer = () => {
+  const inputFile = useRef();
+
+  const onButtonClick = (e) => {
+    // inputFile.current.click();
+    console.log(`clicked for file`);
+  };
+
   return (
     <>
-      {/*  <div className={`object-container`}> */}
+      <div className="close-icon">
+        <GiCrossedBones />
+      </div>
+      <Input extraClass="drawer-text-input mt-3" placeholder="Search Object" />
       <div>
         <div className={`object-heading-container`}>
           <h6 className={`object-heading`}>Admittance & Exit</h6>
@@ -91,6 +107,12 @@ const ObjectsContainer = () => {
         <FaHospital className={`object-svg`} size={28} />
         <BiHotel className={`object-svg`} size={28} />
         <FaGasPump className={`object-svg`} size={28} />
+      </div>
+      <div id="object-image-upload">
+        <Input type="file" id="hidden-upload-input" ref={inputFile} />
+        <Link id="link-upload-input" onClick={(e) => onButtonClick()}>
+          + Upload your own image
+        </Link>
       </div>
     </>
   );

@@ -1,17 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Input = ({ type, labelText, id, value, placeholder, htmlFor, name }) => {
+const Input = ({
+  type,
+  id,
+  extraClass,
+  value,
+  placeholder,
+  name,
+  onChangeFunc,
+}) => {
   return (
     <>
       <input
         type={type}
         id={id}
+        className={extraClass}
         name={name}
         value={value}
         placeholder={placeholder}
+        onChange={onChangeFunc}
       />
-      <label htmlFor={htmlFor}>{labelText}</label>
     </>
   );
 };
@@ -19,17 +28,17 @@ const Input = ({ type, labelText, id, value, placeholder, htmlFor, name }) => {
 Input.propTypes = {
   type: PropTypes.string,
   id: PropTypes.string,
+  extraClass: PropTypes.string,
   placeholder: PropTypes.string,
-  htmlFor: PropTypes.string,
-  labelText: PropTypes.string,
+  onChangeFunc: PropTypes.func,
 };
 
 Input.defaultProps = {
   type: "",
   id: "",
+  extraClass: "",
   placeholder: "",
-  htmlFor: "",
-  labelText: "",
+  onChangeFunc: () => {},
 };
 
 export default Input;

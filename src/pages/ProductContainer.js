@@ -1,7 +1,7 @@
 import React from "react";
 import Thumbnail from "../components/Thumbnail";
 
-const ThumbnailContainer = () => {
+const ProductContainer = () => {
   return (
     <>
       <Thumbnail />
@@ -14,4 +14,4 @@ const ThumbnailContainer = () => {
   );
 };
 
-export default ThumbnailContainer;
+export default ProductContainer;
