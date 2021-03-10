@@ -17,7 +17,7 @@ TextHolder.propTypes = {
 
 TextHolder.defaultProps = {
   id: "",
-  extraClass: "text-holder",
+  extraClass: "",
   text: "",
 };
 
