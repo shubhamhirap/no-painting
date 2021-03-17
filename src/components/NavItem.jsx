@@ -4,19 +4,21 @@ import { ICON } from "../assets/utils/Icons";
 import { BACKGROUNDCOLOR } from "../assets/utils/BackgroundColor";
 import { COLOR } from "../assets/utils/Color";
 
-const NavItem = ({ icon, text, extraClass, onClickFunction }) => {
+const NavItem = ({ id, icon, text, extraClass, onClickFunction }) => {
   return (
-    <li className={`nav-item ${extraClass}`} onClick={onClickFunction}>
+    <li id={id} className={`nav-item ${extraClass}`} onClick={onClickFunction}>
       {icon}
       <div className="textContainer text-center">{text}</div>
     </li>
   );
 };
 
-NavItem.propTypes = { 
+NavItem.propTypes = {
+  id: PropTypes.string,
   text: PropTypes.string,
   extraClass: PropTypes.string,
-  icon: PropTypes.oneOf(Object.keys(ICON)),
+  // icon: PropTypes.oneOf(Object.keys(ICON)),
+  icon: PropTypes.object,
   backgroundColor: PropTypes.oneOf(Object.keys(BACKGROUNDCOLOR)),
   color: PropTypes.oneOf(Object.keys(COLOR)),
   value: PropTypes.bool,
@@ -28,9 +30,9 @@ NavItem.backgroundColor = BACKGROUNDCOLOR;
 NavItem.color = COLOR;
 
 NavItem.defaultProps = {
+  id: "",
   text: "",
   icon: null,
-  id: "",
   extraClass: "",
   backgroundColor: null,
   color: null,

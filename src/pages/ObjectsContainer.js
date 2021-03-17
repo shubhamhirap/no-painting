@@ -37,76 +37,81 @@ const ObjectsContainer = () => {
   };
 
   return (
-    <>
-      <div className="close-icon">
+    <div id="object-container">
+      <div id="close-icon-object">
         <GiCrossedBones />
       </div>
-      <Input extraClass="drawer-text-input mt-3" placeholder="Search Object" />
-      <div>
-        <div className={`object-heading-container`}>
-          <h6 className={`object-heading`}>Admittance & Exit</h6>
-          <Link to="#" className="object-link">
-            See All
-          </Link>
-        </div>
-        <GiExitDoor className={`object-svg`} size={28} />
-        <BsFullscreenExit className={`object-svg`} size={28} />
-        <AiOutlineArrowUp className={`object-svg`} size={28} />
-        <AiOutlineArrowDown className={`object-svg`} size={28} />
-        <AiOutlineArrowLeft className={`object-svg`} size={28} />
-        <AiOutlineArrowRight className={`object-svg`} size={28} />
-        <GrEmergency className={`object-svg`} size={28} />
+      <div id="object-search-close">
+        <Input extraClass="drawer-text-input" placeholder="Search Object" />
+        <GiCrossedBones  id="close-icon-m-object"/>
       </div>
-      <div>
-        <div className={`object-heading-container`}>
-          <h6 className={`object-heading`}>Material</h6>
-          <Link to="#" className="object-link">
-            See All
-          </Link>
+      <div id="object-mobile-inline">
+        <div className="object-inline">
+          <div className={`object-heading-container`}>
+            <h6 className={`object-heading`}>Admittance & Exit</h6>
+            <Link to="#" className="object-link">
+              See All
+            </Link>
+          </div>
+          <GiExitDoor className={`object-svg`} size={28} />
+          <BsFullscreenExit className={`object-svg`} size={28} />
+          <AiOutlineArrowUp className={`object-svg`} size={28} />
+          <AiOutlineArrowDown className={`object-svg`} size={28} />
+          <AiOutlineArrowLeft className={`object-svg`} size={28} />
+          <AiOutlineArrowRight className={`object-svg`} size={28} />
+          <GrEmergency className={`object-svg`} size={28} />
         </div>
-        <AiTwotoneFire className={`object-svg`} size={28} />
-        <IoMdNuclear className={`object-svg`} size={28} />
-        <GiBiohazard className={`object-svg`} size={28} />
-        <GiNuclearWaste className={`object-svg`} size={28} />
-        <FaSkull className={`object-svg`} size={28} />
-        <GoRadioTower className={`object-svg`} size={28} />
-      </div>
-      <div>
-        <div className={`object-heading-container`}>
-          <h6 className={`object-heading`}>Directional</h6>
-          <Link to="#" className="object-link">
-            See All
-          </Link>
+        <div className="object-inline">
+          <div className={`object-heading-container`}>
+            <h6 className={`object-heading`}>Material</h6>
+            <Link to="#" className="object-link">
+              See All
+            </Link>
+          </div>
+          <AiTwotoneFire className={`object-svg`} size={28} />
+          <IoMdNuclear className={`object-svg`} size={28} />
+          <GiBiohazard className={`object-svg`} size={28} />
+          <GiNuclearWaste className={`object-svg`} size={28} />
+          <FaSkull className={`object-svg`} size={28} />
+          <GoRadioTower className={`object-svg`} size={28} />
         </div>
-        <AiOutlineArrowDown className={`object-svg`} size={28} />
-        <AiOutlineArrowUp className={`object-svg`} size={28} />
-        <AiOutlineArrowLeft className={`object-svg`} size={28} />
-        <AiOutlineArrowRight className={`object-svg`} size={28} />
-        <BsArrowReturnLeft className={`object-svg`} size={28} />
-        <BsArrowReturnRight className={`object-svg`} size={28} />
-        <MdAssignmentReturn className={`object-svg`} size={28} />
-      </div>
-      <div>
-        <div className={`object-heading-container`}>
-          <h6 className={`object-heading`}>Electrical Hazards</h6>
-          <Link to="#" className="object-link">
-            See All
-          </Link>
+        <div className="object-inline">
+          <div className={`object-heading-container`}>
+            <h6 className={`object-heading`}>Directional</h6>
+            <Link to="#" className="object-link">
+              See All
+            </Link>
+          </div>
+          <AiOutlineArrowDown className={`object-svg`} size={28} />
+          <AiOutlineArrowUp className={`object-svg`} size={28} />
+          <AiOutlineArrowLeft className={`object-svg`} size={28} />
+          <AiOutlineArrowRight className={`object-svg`} size={28} />
+          <BsArrowReturnLeft className={`object-svg`} size={28} />
+          <BsArrowReturnRight className={`object-svg`} size={28} />
+          <MdAssignmentReturn className={`object-svg`} size={28} />
         </div>
-        <BsTriangle className={`object-svg`} size={28} />
-        <BsLightningFill className={`object-svg`} size={28} />
-      </div>
-      <div>
-        <div className={`object-heading-container`}>
-          <h6 className={`object-heading`}>Informational</h6>
-          <Link to="#" className="object-link">
-            See All
-          </Link>
+        <div className="object-inline">
+          <div className={`object-heading-container`}>
+            <h6 className={`object-heading`}>Electrical Hazards</h6>
+            <Link to="#" className="object-link">
+              See All
+            </Link>
+          </div>
+          <BsTriangle className={`object-svg`} size={28} />
+          <BsLightningFill className={`object-svg`} size={28} />
         </div>
-        <FaSchool className={`object-svg`} size={28} />
-        <FaHospital className={`object-svg`} size={28} />
-        <BiHotel className={`object-svg`} size={28} />
-        <FaGasPump className={`object-svg`} size={28} />
+        <div className="object-inline">
+          <div className={`object-heading-container`}>
+            <h6 className={`object-heading`}>Informational</h6>
+            <Link to="#" className="object-link">
+              See All
+            </Link>
+          </div>
+          <FaSchool className={`object-svg`} size={28} />
+          <FaHospital className={`object-svg`} size={28} />
+          <BiHotel className={`object-svg`} size={28} />
+          <FaGasPump className={`object-svg`} size={28} />
+        </div>
       </div>
       <div id="object-image-upload">
         <Input type="file" id="hidden-upload-input" ref={inputFile} />
@@ -114,7 +119,7 @@ const ObjectsContainer = () => {
           + Upload your own image
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

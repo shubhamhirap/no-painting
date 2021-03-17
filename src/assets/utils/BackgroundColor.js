@@ -6,4 +6,5 @@ export const BACKGROUNDCOLOR = {
   LIGHT: "#F7F7F7",
   WARNING: "#F0AD4E",
   INFO: "#5BC0DE",
+  BLUE: "#3e3f88"
 };

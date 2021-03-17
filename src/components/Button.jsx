@@ -14,6 +14,7 @@ const Button = ({
   color,
   type,
   value,
+  disable,
 }) => {
   return (
     <>
@@ -26,6 +27,7 @@ const Button = ({
         value={value}
         onClick={onClickFunction}
         style={{ backgroundColor: backgroundColor, color: color }}
+        disabled={disable}
       >
         {icon}
         <div className="textContainer text-center">{text}</div>
@@ -44,6 +46,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(Object.keys(COLOR)),
   value: PropTypes.bool,
   onClickFunction: PropTypes.func,
+  disable: PropTypes.bool,
 };
 
 Button.icon = ICON;
@@ -60,6 +63,7 @@ Button.defaultProps = {
   color: null,
   value: null,
   onClickFunction: () => {},
+  disable: false,
 };
 
 export default Button;

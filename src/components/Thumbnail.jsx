@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ThumbnailImg from "../assets/images/no-image-placeholder.jpg";
 
-const Thumbnail = ({ id, extraClass }) => {
+const Thumbnail = ({ id, extraClass, onClickFunc }) => {
   return (
     <>
       <img
@@ -10,6 +10,7 @@ const Thumbnail = ({ id, extraClass }) => {
         className={`thumbnail-item ${extraClass}`}
         src={ThumbnailImg}
         alt="Product Thumbnails"
+        onClick={onClickFunc}
       />
     </>
   );
@@ -18,11 +19,13 @@ const Thumbnail = ({ id, extraClass }) => {
 Thumbnail.propTypes = {
   id: PropTypes.string,
   extraClass: PropTypes.string,
+  onClickFunc: PropTypes.func,
 };
 
 Thumbnail.defaultProps = {
   id: "",
   extraClass: "",
+  onClickFunc: () => {},
 };
 
 export default Thumbnail;

@@ -1,17 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../components/Button";
+import { FcRefresh } from "react-icons/fc";
 
 const RefreshButton = () => {
   return (
-    <div>
-      <Link className={`nav-item-link`} to="/">
-        <Button
-          id={`nav-refresh-btn`}
-          icon={Button.icon.REFRESH}
-          backgroundColor={Button.backgroundColor.LIGHT}
-        />
-      </Link>
+    <div className={`nav-item-link`}>
+      <div id="nav-refresh-btn">
+        <FcRefresh />
+      </div>
     </div>
   );
 };

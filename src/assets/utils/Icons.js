@@ -1,11 +1,11 @@
 import { FaCropAlt, FaObjectGroup } from "react-icons/fa";
-import { GrTemplate } from "react-icons/gr";
+import { HiOutlineTemplate } from "react-icons/hi";
 import { BiGrid, BiText } from "react-icons/bi";
 import { FcRefresh } from "react-icons/fc";
 
 export const ICON = {
   PRODUCT: <BiGrid />,
-  TEMPLATE: <GrTemplate />,
+  TEMPLATE: <HiOutlineTemplate />,
   FORMAT: <FaCropAlt />,
   TEXT: <BiText />,
   OBJECT: <FaObjectGroup />,
